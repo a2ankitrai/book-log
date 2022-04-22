@@ -10,7 +10,6 @@ import {
   Req,
   Res,
 } from '@nestjs/common';
-import { Request, Response } from 'express';
 import { BookService } from './book-service';
 import { Book } from './interfaces/book.interface';
 

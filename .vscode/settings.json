@@ -1,0 +1,7 @@
+{
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+  "cSpell.words": [
+    "nestjs"
+  ],
+}
