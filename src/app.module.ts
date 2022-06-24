@@ -1,14 +1,14 @@
 import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
+import { AdminController } from './admin/admin.controller';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { AdminController } from './admin/admin.controller';
-import { UsersModule } from './users/users.module';
+import { AuthModule } from './auth/auth.module';
 import { BooksModule } from './books/books.module';
 import { LoggerMiddleware } from './logger.middleware';
 import { PostsModule } from './posts/posts.module';
-
+import { UsersModule } from './users/users.module';
 @Module({
-  imports: [UsersModule, BooksModule, PostsModule],
+  imports: [ BooksModule, PostsModule, AuthModule, UsersModule],
   controllers: [AppController, AdminController],
   providers: [AppService],
 })

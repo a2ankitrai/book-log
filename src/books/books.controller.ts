@@ -4,23 +4,21 @@ import {
   Delete,
   Get,
   HttpCode,
-  HttpStatus,
   Param,
-  Post,
-  Req,
-  Res,
+  Post
 } from '@nestjs/common';
 import { BookService } from './book-service';
 import { Book } from './interfaces/book.interface';
-
+ 
 @Controller('books')
 export class BooksController {
   constructor(private bookService: BookService) {}
 
-  // @Get()
-  // findAll(@Req() request: Request, @Res() res: Response) {
-  //   //console.log(request);
-  //   res.send('All the books');
+  // @Get('findAllReq')
+  // findAllReq(@Req() request: Request, @Res() res: Response) {
+  //   console.log(request);
+
+  //   res.ok;
   // }
 
   // Another option
@@ -39,14 +37,14 @@ export class BooksController {
 
   @Get(':id/:sub_id')
   findBookById(@Param() params): string {
-    return `Book with id: ${params.id} & sub_id: ${params.sub_id}`;
+    return `Book with id: ${params.id} & sub_id: ${params.sub_id}`; 
   }
 
   @Post()
   @HttpCode(204)
   async create(@Body() book: Book): Promise<string> {
-    this.bookService.create(book);
-    console.log(book);
+    this.bookService.create(book)
+    console.log(book)
     return `New book created with name ${book.name}`;
   }
 
