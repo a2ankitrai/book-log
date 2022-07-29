@@ -7,8 +7,9 @@ import { BooksModule } from './books/books.module';
 import { LoggerMiddleware } from './logger.middleware';
 import { PostsModule } from './posts/posts.module';
 import { UsersModule } from './users/users.module';
+import { CatsModule } from './cats/cats.module';
 @Module({
-  imports: [ BooksModule, PostsModule, AuthModule, UsersModule],
+  imports: [ BooksModule, PostsModule, AuthModule, UsersModule, CatsModule],
   controllers: [AppController, AdminController],
   providers: [AppService],
 })

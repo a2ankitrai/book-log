@@ -4,7 +4,7 @@
   "cSpell.words": [
     "nestjs"
   ],
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "prettier.semi": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": false
