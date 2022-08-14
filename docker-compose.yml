@@ -1,0 +1,6 @@
+version: '3'
+services:
+  booker:
+    image: book-log:0.1
+    ports:
+      - '3000:3000'
